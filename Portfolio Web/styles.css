@@ -140,3 +140,29 @@
     font-family: 'Poppins', sans-serif;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
+
+/* Contact Section */
+.Contact {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #333;
+}
+.Contact-text h2 {
+    margin-top: -50px;
+    font-size: 30px;
+    color: #ff4500;
+    margin-bottom: -10px;
+    font-family: 'Poppins', sans-serif;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+.Contact-text {
+    margin-left: 300px;
+    text-align: left;
+    padding: 20px;
+    line-height: 2.2;
+    margin-bottom: 10px;
+    background-color: #333;
+    color: #ffffff;
+}
+
