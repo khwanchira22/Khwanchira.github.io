@@ -4,19 +4,19 @@ let currentSlide = 0;
 // ฟังก์ชันเลื่อนภาพ
 function moveSlide(direction) {
     const carouselInner = document.querySelector('.carousel-inner');
-    const items = document.querySelectorAll('.item');
-    const itemWidth = items[0].offsetWidth + 10; // รวมระยะ margin ระหว่าง items
+    const items = document.querySelectorAll('.carousel-inner .item');
+    const totalSlides = items.length;
 
     // อัปเดตตำแหน่งสไลด์
     currentSlide += direction;
 
-    // ตรวจสอบขอบเขตการเลื่อนสไลด์
+    // ตรวจสอบขอบเขตการเลื่อนสไลด์ (วนกลับไปเริ่มใหม่ถ้าถึงขอบ)
     if (currentSlide < 0) {
+        currentSlide = totalSlides - 1;
+    } else if (currentSlide >= totalSlides) {
         currentSlide = 0;
-    } else if (currentSlide > items.length - 1) {
-        currentSlide = items.length - 1;
     }
 
     // เลื่อน carousel โดยใช้การแปลงตำแหน่ง
-    carouselInner.style.transform = `translateX(${-currentSlide * itemWidth}px)`;
+    carouselInner.style.transform = `translateX(${-currentSlide * 100}%)`;
 }

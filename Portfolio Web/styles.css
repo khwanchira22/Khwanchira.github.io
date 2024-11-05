@@ -188,20 +188,13 @@
     color: #ffffff;
 }
 
-body {
-    background-image: url(img/Orange\ smoke.png); /* ใส่ที่อยู่ของภาพ */
-    background-size: 50%;        /* ปรับขนาดให้ครอบคลุมเต็มหน้า */
-    background-position: left;   /* จัดตำแหน่งให้อยู่ตรงกลาง */
-    background-repeat: no-repeat;  /* ป้องกันการย้ำซ้ำของภาพ */
-    background-attachment: local;  /* ทำให้ภาพพื้นหลังไม่เลื่อนตามการ scroll */
-    margin: 0;                     /* ลบขอบรอบๆ เพื่อให้ครอบคลุมเต็มที่ */
-    height: 50vh;                 /* ให้ body สูงเต็มจอ */
-}
-
+/* Tast page */
 /* Carousel container styling */
 .carousel-container {
     display: flex;
     align-items: center;
+    padding: 20px;
+    background-color: #333;
     justify-content: center;
     gap: 10px;
 }
@@ -216,11 +209,11 @@ body {
 
 /* Item styling */
 .item {
-    min-width: 100px; /* ขนาดของแต่ละ photo */
-    height: 100px;
+    min-width: 200px; 
+    height: 200px;
     background-color: rgb(255, 0, 0);
     color: white;
-    display: flex;
+    display: contents;
     align-items: center;
     justify-content: center;
     font-size: 1.2em;
@@ -239,8 +232,8 @@ body {
 }
 
 .carousel-control:hover {
-    background-color: #333;
-    font-size: 1.2em;
+    background-color: #ffffff;
+    font-size: 1.1em;
     border-radius: 30px;
 
 }
