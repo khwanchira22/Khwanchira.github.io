@@ -60,4 +60,48 @@
     width: auto;
     height: 150px; 
 }
+body {
+    font-family: Arial, sans-serif;
+    background-color: #333; /* พื้นหลังหลักของหน้า */
+    color: #ffffff;
+    padding: 20px;
+}
 
+.content-section {
+    background-color: #444; /* พื้นหลังของแต่ละ section */
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 10px; /* ทำให้มุมของ section โค้งมน */
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 900px;
+    margin: auto; /* จัดให้อยู่กลาง section */
+}
+
+.image-box {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.image-box img {
+    width: 100%;
+    border-radius: 15px; /* ทำให้รูปภาพมีขอบมน */
+    border: 5px solid #ff6600; /* กำหนดขอบของรูปภาพเป็นสีส้ม */
+}
+
+.text-box {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #ff6600; /* สร้างกรอบเส้นประสีส้ม */
+    padding: 20px;
+    color: #ffffff;
+    text-align: center;
+    min-height: 300px; /* กำหนดความสูงขั้นต่ำให้กล่องข้อความ */
+}

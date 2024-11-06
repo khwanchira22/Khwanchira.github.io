@@ -1,22 +1,21 @@
-// ตัวแปรสำหรับติดตามตำแหน่งปัจจุบันของ carousel
-let currentSlide = 0;
+let currentIndex = 0;
 
-// ฟังก์ชันเลื่อนภาพ
 function moveSlide(direction) {
-    const carouselInner = document.querySelector('.carousel-inner');
     const items = document.querySelectorAll('.carousel-inner .item');
-    const totalSlides = items.length;
+    const totalItems = items.length;
+    const containerWidth = document.querySelector('.carousel-container').offsetWidth;
+    const itemWidth = items[0].offsetWidth + 10; // width + margin
 
-    // อัปเดตตำแหน่งสไลด์
-    currentSlide += direction;
+    // Calculate new index
+    currentIndex += direction;
 
-    // ตรวจสอบขอบเขตการเลื่อนสไลด์ (วนกลับไปเริ่มใหม่ถ้าถึงขอบ)
-    if (currentSlide < 0) {
-        currentSlide = totalSlides - 1;
-    } else if (currentSlide >= totalSlides) {
-        currentSlide = 0;
+    // Handle wrap-around
+    if (currentIndex < 0) {
+        currentIndex = totalItems - 3; // Show last set of items
+    } else if (currentIndex > totalItems - 3) {
+        currentIndex = 0; // Reset to the beginning
     }
 
-    // เลื่อน carousel โดยใช้การแปลงตำแหน่ง
-    carouselInner.style.transform = `translateX(${-currentSlide * 100}%)`;
+    // Move carousel
+    document.querySelector('.carousel-inner').style.transform = `translateX(-${currentIndex * itemWidth}px)`;
 }

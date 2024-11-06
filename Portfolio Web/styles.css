@@ -53,12 +53,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 80px;
 }
 
 .photo-section img {
     width: auto;
-    height: 500px; 
+    height: 680px; 
 }
 
 .photo {
@@ -70,10 +69,11 @@
 
 .profile-text {
     margin-top: 0px;
+    font-size: 22px;
 }
 
 .profile-text h2 {
-    font-size: 40px;
+    font-size: 68px;
     margin-bottom: 10px;
 }
 
@@ -99,7 +99,7 @@
 }
 
 .education h3 {
-    font-size: 30px;
+    font-size: 40px;
     margin-bottom: 35px;
 }
 
@@ -112,20 +112,20 @@
 
 .card {
     background-color: #444;
-    padding: 20px;
+    padding: 40px;
     border-radius: 20px;
-    width: 200px;
+    width: 300px;
     text-align: center;
 }
 
 .card img {
     width: 100%;
     height: auto;
-    border-radius: 0px;
 }
 
 .card p {
     margin-top: 5px;
+    font-size: 20px;
     font-weight: bold;
     color: #ffffff;
     font-family: 'Poppins', sans-serif;
@@ -135,7 +135,7 @@
 .card span {
     margin-top: 10px;
     display: block;
-    font-size: 12px;
+    font-size: 15px;
     color: #cccccc;
     font-family: 'Poppins', sans-serif;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
@@ -149,7 +149,7 @@
 }
 .GPA-text h2 {
     margin-top: -50px;
-    font-size: 30px;
+    font-size: 40px;
     color: #ff4500;
     margin-bottom: -10px;
     font-family: 'Poppins', sans-serif;
@@ -157,7 +157,8 @@
 }
 
 .GPA-text {
-    margin-right: 410px;
+    margin-right: 260px;
+    font-size: 20px;
     text-align: right;
     padding: 20px;
     line-height: 2.2;
@@ -173,67 +174,18 @@
 }
 .Contact-text h2 {
     margin-top: -50px;
-    font-size: 30px;
+    font-size: 40px;
     color: #ff4500;
     margin-bottom: -10px;
     font-family: 'Poppins', sans-serif;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 .Contact-text {
-    margin-left: 400px;
+    margin-left: 250px;
+    font-size: 20px;
     text-align: left;
     padding: 20px;
     line-height: 2.2;
     margin-bottom: 10px;
     color: #ffffff;
-}
-
-/* Tast page */
-/* Carousel container styling */
-.carousel-container {
-    display: flex;
-    align-items: center;
-    padding: 20px;
-    background-color: #333;
-    justify-content: center;
-    gap: 10px;
-}
-
-/* Carousel inner styling */
-.carousel-inner {
-    display: flex;
-    overflow: hidden;
-    width: 300px; /* กำหนดความกว้างของ carousel */
-    transition: transform 0.3s ease; /* เพิ่ม transition สำหรับการเลื่อน */
-}
-
-/* Item styling */
-.item {
-    min-width: 200px; 
-    height: 200px;
-    background-color: rgb(255, 0, 0);
-    color: white;
-    display: contents;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2em;
-    margin-right: 10px;
-}
-
-/* Control button styling */
-.carousel-control {
-    background-color: #ff4500;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1em;
-    cursor: pointer;
-    font-weight: bold;
-    border-radius: 30px;
-}
-
-.carousel-control:hover {
-    background-color: #ffffff;
-    font-size: 1.1em;
-    border-radius: 30px;
-
 }
