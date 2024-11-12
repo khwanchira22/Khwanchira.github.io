@@ -1,4 +1,5 @@
 /* Navbar */
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -34,12 +35,11 @@
 }
 
 
-/* Activities Section */
+/* Certificates Section */
 .Certificate {
     text-align: center;
-    background-color: #2C2C2B;
+    background-color: #2C2C233B;
     color: white;
-    padding: 50px 20px;
 }
 
 .Certificate-section {
@@ -55,18 +55,15 @@
 }
 
 body {
-    background-color:  #2C2C2B;
-    color: #ffffff;
-    padding: 20px;
+    background-color:  #2C2C2B; /* พื้นหลังหลักของหน้า */
 }
-
 
 .content-section {
     display: flex;
-    gap: 20px;
+    gap: 35px;
+    padding: 20px;
     max-width: 1200px;
     width: 100%;
-    padding: 20px;
     justify-content: center;
     margin: auto; /* จัดกึ่งกลางทั้งแนวตั้งและแนวนอน */
 }
