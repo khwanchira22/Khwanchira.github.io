@@ -3,7 +3,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
 }
 
 /* Navbar */
@@ -44,7 +43,7 @@
 /* Activities Section */
 .Activities {
     text-align: center;
-    background-color: #222;
+    background-color: #2C2C2B;
     color: white;
     padding: 50px 20px;
 }
@@ -58,20 +57,21 @@
 
 .Activities-section img {
     width: auto;
-    height: 150px; 
+    height: 200px;
 }
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #333; /* พื้นหลังหลักของหน้า */
-    color: #ffffff;
-    padding: 20px;
+    background-color:#2C2C2B; /* พื้นหลังหลักของหน้า */
 }
 
 .content-section {
-    background-color: #444; /* พื้นหลังของแต่ละ section */
+    background-color: #333; /* พื้นหลังของแต่ละ section */
     padding: 30px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     border-radius: 10px; /* ทำให้มุมของ section โค้งมน */
+    width: 80%; /* กำหนดความกว้างเป็น 80% ของหน้าจอ */
+    margin-left: auto;
+    margin-right: auto; /* จัด section ให้อยู่กลางหน้าจอ */
 }
 
 .container {
@@ -84,7 +84,7 @@ body {
 
 .image-box {
     flex: 1;
-    margin-right: 20px;
+    margin-right: 25px;
 }
 
 .image-box img {
@@ -95,13 +95,17 @@ body {
 
 .text-box {
     flex: 1;
-    height: 100%;
     display: flex;
+    border-radius: 15px;
     align-items: center;
     justify-content: center;
     border: 2px dashed #ff6600; /* สร้างกรอบเส้นประสีส้ม */
     padding: 20px;
     color: #ffffff;
     text-align: center;
-    min-height: 300px; /* กำหนดความสูงขั้นต่ำให้กล่องข้อความ */
+    min-height: 250px; /* กำหนดความสูงขั้นต่ำให้กล่องข้อความ */
+    font-family: 'Mitr', sans-serif; /* กำหนดฟอนต์ Mitr ให้ทั้งหน้า */
+    font-size: 22px;
+    line-height: 1.5;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
