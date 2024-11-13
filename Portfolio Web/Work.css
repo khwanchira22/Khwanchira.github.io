@@ -93,6 +93,15 @@ body {
     transition: transform 0.9s ease;
 }
 
+.item-text {
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
 .item {
     min-width: 300px;
     margin: 15px;
@@ -115,11 +124,13 @@ body {
 
 .carousel-control.left {
     left: 10px;
+    top: 60%; /* ขยับปุ่มลงมา 60% จากด้านบน */
     
 }
 
 .carousel-control.right {
     right: 10px;
+    top: 60%; /* ขยับปุ่มลงมา 60% จากด้านบน */
 }
 
 /* เอฟเฟกต์เมื่อเมาส์เลื่อนผ่าน */
@@ -127,5 +138,5 @@ body {
     background-color: #333;
     color: #ffffff;
     transform: translateY(-50%) scale(1.1); 
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease; /* ระยะเวลาในการซูม */ 
 }
