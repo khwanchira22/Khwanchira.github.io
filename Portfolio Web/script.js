@@ -1,22 +1,22 @@
-let currentIndex = 0; // ตำแหน่งเริ่มต้นของภาพ
+let currentSlide = 0;
+const itemsToShow = 4; // จำนวนภาพที่แสดงในหน้าจอ
+const itemWidth = 300; // ความกว้างของแต่ละภาพใน Carousel
+const totalSlides = document.querySelectorAll('.carousel-inner .item').length;
 
 function moveSlide(direction) {
-    const items = document.querySelectorAll('.carousel-inner .item');
-    const totalItems = items.length;
-    const itemWidth = items[0].offsetWidth + 20; // ความกว้างของภาพรวม margin
+    // เพิ่มค่า currentSlide ตาม direction (1 หรือ -1)
+    currentSlide += direction;
 
-    // ปรับตำแหน่งของ currentIndex ตาม direction
-    currentIndex += direction;
-
-    // จัดการการวนลูป
-    if (currentIndex >= totalItems) {
-        // ถ้า currentIndex เกินจำนวนภาพทั้งหมด ให้กลับไปที่รูปแรก
-        currentIndex = 0;
-    } else if (currentIndex < 1) {
-        // ถ้า currentIndex น้อยกว่า 0 ให้กลับไปที่รูปสุดท้าย
-        currentIndex = totalItems - 1;
+    // ตรวจสอบหากไปเกินภาพสุดท้าย
+    if (currentSlide > totalSlides - itemsToShow) {
+        // หากถึงภาพสุดท้ายและคลิก Next อีกครั้ง ให้กลับไปที่ภาพแรก
+        currentSlide = 0;
+    } else if (currentSlide < 0) {
+        // ถ้าไปเกินภาพแรกและคลิก Previous ให้ไปที่ภาพสุดท้าย
+        currentSlide = totalSlides - itemsToShow;
     }
 
-    // เปลี่ยนตำแหน่งของ carousel โดยเลื่อนในแนวนอนตาม currentIndex
-    document.querySelector('.carousel-inner').style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+    // คำนวณ offset เพื่อเลื่อน Carousel
+    const offset = -currentSlide * itemWidth;
+    document.querySelector('.carousel-inner').style.transform = `translateX(${offset}px)`;
 }
