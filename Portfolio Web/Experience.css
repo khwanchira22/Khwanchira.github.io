@@ -40,24 +40,24 @@
     color: #ff7b00; /* สีเมื่อวางเมาส์บนลิงก์ */
 }
 
-/* ส่วน Activities */
-.Activities {
+/* ส่วน Experience  */
+.Experience {
     text-align: center; /* จัดข้อความให้อยู่ตรงกลาง */
     background-color: #2C2C2B; /* สีพื้นหลัง */
     color: white; /* สีข้อความ */
     padding: 20px 20px; /* เว้นระยะห่างภายใน */
 }
 
-.Activities-section {
+.Experience-section {
     display: flex; /* ใช้ Flexbox สำหรับการจัดวาง */
     justify-content: center; /* จัดวางกึ่งกลางแนวนอน */
     align-items: center; /* จัดวางกึ่งกลางแนวตั้ง */
     gap: 80px; /* ช่องว่างระหว่างองค์ประกอบ */
 }
 
-.Activities-section img {
+.Experience-section img {
     width: auto; /* ความกว้างอัตโนมัติ */
-    height: 200px; /* ความสูงของรูปภาพ */
+    height: 220px; /* ความสูงของรูปภาพ */
 }
 
 /* สไตล์พื้นฐานของ body */

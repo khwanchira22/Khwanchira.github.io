@@ -1,147 +1,169 @@
-
-/* General Reset */
+/* รีเซ็ตสไตล์พื้นฐานสำหรับทุกองค์ประกอบในหน้า */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    margin: 0; /* ตั้งค่าขอบของทุกองค์ประกอบเป็น 0 */
+    padding: 0; /* ตั้งค่าพื้นที่ด้านในของทุกองค์ประกอบเป็น 0 */
+    box-sizing: border-box; /* รวม padding และ border ในการคำนวณขนาดของกล่อง */
+    font-family: 'Poppins', sans-serif; /* ใช้ฟอนต์ Poppins เป็นหลัก */
 }
 
-/* Navbar */
+/* สไตล์ของ Navbar (เมนูนำทางด้านบน) */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #333;
-    color: white;
+    display: flex; /* ใช้ Flexbox สำหรับการจัดวาง */
+    justify-content: space-between; /* จัดองค์ประกอบภายใน Navbar ให้มีช่องว่างระหว่างกัน */
+    align-items: center; /* จัดวางองค์ประกอบภายในให้กึ่งกลางในแนวตั้ง */
+    padding: 10px 20px; /* เพิ่มช่องว่างรอบ ๆ Navbar */
+    background-color: #333; /* ตั้งค่าสีพื้นหลังของ Navbar เป็นสีเทาเข้ม */
+    color: white; /* ตั้งค่าสีตัวอักษรเป็นสีขาว */
 }
 
 .navbar .logo {
-    font-size: 30px;
-    font-weight: bold;
-    font-family: 'Poppins', sans-serif;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    font-size: 30px; /* ขนาดตัวอักษรใหญ่ */
+    font-weight: bold; /* ตัวหนา */
+    font-family: 'Poppins', sans-serif; /* ฟอนต์ Poppins */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* เพิ่มเงาให้กับข้อความ */
 }
 
 .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
+    list-style: none; /* เอาสัญลักษณ์หน้ารายการออก */
+    display: flex; /* จัดวางลิงก์ในแนวนอน */
+    gap: 20px; /* ช่องว่างระหว่างลิงก์ */
 }
 
 .nav-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 15px;
-    font-family: 'Poppins', sans-serif;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    color: white; /* สีของลิงก์เป็นสีขาว */
+    text-decoration: none; /* เอาเส้นใต้ลิงก์ออก */
+    font-size: 15px; /* ขนาดตัวอักษรของลิงก์ */
+    font-family: 'Poppins', sans-serif; /* ฟอนต์ Poppins */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* เพิ่มเงาให้ลิงก์ */
 }
 
 .nav-links a:hover {
-    color: #ff7b00;
+    color: #ff7b00; /* เปลี่ยนสีลิงก์เมื่อเอาเมาส์วาง */
 }
 
-/* Mywork Section */
+/* ส่วนของ "My Work" หรือการแสดงผลงาน */
 .Work {
-    text-align: center;
-    background-color: #2C2C2B;
-    padding: 50px 20px;
+    text-align: center; /* จัดข้อความให้อยู่ตรงกลาง */
+    background-color: #2C2C2B; /* สีพื้นหลังเทาเข้ม */
+    padding: 50px 20px; /* พื้นที่ว่างรอบ ๆ ส่วนนี้ */
 }
 
 .Work-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 80px;
+    display: flex; /* ใช้ Flexbox ในการจัดวาง */
+    justify-content: center; /* จัดวางองค์ประกอบให้กึ่งกลาง */
+    align-items: center; /* จัดให้อยู่กึ่งกลางแนวตั้ง */
+    gap: 80px; /* ช่องว่างระหว่างองค์ประกอบ */
 }
 
 .Work-section img {
-    width: auto;
-    height: 200px;
+    width: auto; /* ความกว้างอัตโนมัติ */
+    height: 220px; /* กำหนดความสูงของรูปภาพ */
 }
 
+/* สไตล์ทั่วไปของ body */
 body {
-    font-family: Arial, sans-serif;
-    background-color:#2C2C2B; /* พื้นหลังหลักของหน้า */
+    font-family: Arial, sans-serif; /* ตั้งค่าแบบอักษรของหน้า */
+    background-color: #2C2C2B; /* สีพื้นหลังของหน้า */
+    color: white; /* สีตัวอักษร */
 }
 
-/* Tast page */
-.carousel-section {
-    display: flex;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    align-items: center;
-    background-color: #333;
-    padding: 30px;
-    margin-bottom: 25px;
-    border-radius: 10px;
-    width: 70%;
-    margin-left: auto;
-    margin-right: auto;
+/* สไตล์พื้นฐานของ Section แสดง Image Slider */
+.image-sliders-section {
+    padding: 40px 20px 20px; /* เว้นพื้นที่รอบ ๆ ส่วนนี้ */
+    margin: 50px auto; /* จัดให้เป็นกึ่งกลางแนวนอน */
+    border-radius: 10px; /* มุมโค้งมน */
+    bottom: 50px; /* เลื่อนกล่องลง 50px (ไม่ส่งผลจนกว่าตำแหน่งจะถูกเปลี่ยนเป็น absolute หรือ fixed) */
+    width: 80%; /* ความกว้าง 80% ของหน้าจอ */
+    max-width: 1300px; /* กำหนดความกว้างสูงสุด */
+    overflow: hidden; /* ซ่อนองค์ประกอบที่เกินออกมา */
+    position: relative; /* ตั้งให้มีตำแหน่งแบบ relative สำหรับการควบคุมตำแหน่ง */
+    box-shadow: 0px 4px 15px #00000080; /* เงาใต้กล่อง */
 }
 
-.carousel-container {
-    position: relative;
-    width: 100%;
-    max-width: 12000px; /* Adjust max-width to control carousel width */
-    overflow: hidden;
+/* สไตล์ของข้อความหัวเรื่องในแต่ละ Slider */
+.image-sliders-section .item-text {
+    position: absolute; /* วางตำแหน่งให้สัมพันธ์กับ container */
+    top: -55px; /* ขยับขึ้นด้านบน */
+    left: 20px;
+    color: #ffffff; /* สีขาว */
+    font-size: 24px; /* ขนาดตัวอักษร */
+    font-weight: bold; /* ตัวหนา */
+    z-index: 1;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* เพิ่มเงาให้ข้อความ */
 }
 
-.carousel-inner {
-    display: flex;
-    transition: transform 0.5s ease;
-    width: calc(300px * 8); /* Adjust based on number of images */
+/* Container ของ Slider */
+.image-sliders-section .image-sliders-container {
+    position: relative; /* ตำแหน่งสัมพันธ์ */
+    display: flex; /* ใช้ Flexbox */
+    align-items: center; /* จัดให้กึ่งกลางในแนวตั้ง */
+    margin-top: 50px; /* เว้นระยะห่างจากด้านบน */
+    padding: 20px; /* พื้นที่ว่างรอบ container */
 }
 
-.item {
-    min-width: 300px;
+/* สไตล์ภายในของภาพแต่ละภาพ */
+.image-sliders-section .image-sliders-inner {
+    display: flex; /* Flexbox แนวนอน */
+    transition: transform 0.5s ease; /* การเปลี่ยนตำแหน่งมีการเคลื่อนที่ */
+    gap: 15px; /* ช่องว่างระหว่างภาพ */
+}
+
+/* สไตล์ของภาพแต่ละรายการ */
+.image-sliders-section .item {
+    flex: 0 0 25%; /* แสดงภาพ 4 ภาพในแถวเดียว */
     padding: 5px;
+    position: relative;
 }
 
-.item img {
-    width: 100%;
-    border-radius: 10px;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+.image-sliders-section .item img {
+    width: 100%; /* ขยายให้เต็มพื้นที่ */
+    height: auto; /* ความสูงอัตโนมัติ */
+    border-radius: 10px; /* มุมโค้งของรูปภาพ */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* เงารอบ ๆ รูปภาพ */
 }
 
-.carousel-control {
-    background-color: #ff6600;
-    width: 30px;
-    border: none;
-    color: white;
-    border-radius: 2px;
-    font-size: 40px;
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
+/* ปุ่มควบคุมการเลื่อนภาพ */
+.image-sliders-section .sliders-control {
+    position: absolute; /* ตำแหน่งสัมพันธ์ */
+    top: 50%; /* จัดวางตรงกลางในแนวตั้ง */
     transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5); /* สีพื้นหลังโปร่งแสง */
+    color: white; /* สีขาว */
+    font-size: 24px; /* ขนาดตัวอักษร */
+    cursor: pointer; /* เปลี่ยนเป็นมือเมื่อวางเมาส์ */
+    padding: 10px 15px; /* ช่องว่างรอบปุ่ม */
+    border-radius: 8px; /* มุมโค้งมน */
     z-index: 10;
+    border: none; /* ไม่มีเส้นขอบ */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* การเปลี่ยนสีพื้นหลังและขนาดปุ่ม */
 }
 
-.left {
-    left: 10px;
+.image-sliders-section .sliders-control.left {
+    left: 10px; /* วางด้านซ้าย */
 }
 
-.right {
-    right: 10px;
+.image-sliders-section .sliders-control.right {
+    right: 10px; /* วางด้านขวา */
 }
 
-.carousel-control.left {
-    left: 10px;
-    top: 50%; /* ขยับปุ่มลงมา 60% จากด้านบน */
-    
+.image-sliders-section .sliders-control:hover {
+    background-color: #ff6600; /* สีของปุ่มเมื่อเลื่อนเมาส์ */
+    transform: translateY(-50%) scale(1.1); /* ขยายปุ่มเมื่อเลื่อนเมาส์ */
 }
 
-.carousel-control.right {
-    right: 10px;
-    top: 50%; /* ขยับปุ่มลงมา 60% จากด้านบน */
+/* สไตล์พื้นหลังที่แตกต่างกันสำหรับแต่ละ Slider */
+.image-sliders-section[data-sliders-id="sliders1"] {
+    background-color: #444; /* สีพื้นหลังเข้ม */
 }
 
-/* เอฟเฟกต์เมื่อเมาส์เลื่อนผ่าน */
-.carousel-control:hover {
-    background-color: #333;
-    color: #ffffff;
-    transform: translateY(-50%) scale(1.1); 
-    transition: transform 0.3s ease; /* ระยะเวลาในการซูม */ 
+.image-sliders-section[data-sliders-id="sliders2"] {
+    background-color: #333; /* สีพื้นหลังเข้ม */
+}
+
+.image-sliders-section[data-sliders-id="sliders3"] {
+    background-color: #444; /* สีพื้นหลังเข้ม */
+}
+
+.image-sliders-section[data-sliders-id="sliders4"] {
+    background-color: #333; /* สีพื้นหลังเข้ม */
 }
