@@ -1,37 +1,53 @@
 /* สไตล์ Navbar */
 .navbar {
     display: flex; /* ใช้ Flexbox สำหรับการจัดวาง */
-    justify-content: space-between; /* จัดวางองค์ประกอบซ้ายขวาให้มีช่องว่างระหว่างกัน */
-    align-items: center; /* จัดกึ่งกลางในแนวตั้ง */
-    padding: 10px 20px; /* เว้นช่องว่างรอบ Navbar */
+    justify-content: space-between; /* ช่องว่างระหว่างองค์ประกอบใน Navbar */
+    align-items: center; /* จัดวางองค์ประกอบแนวตั้ง */
+    padding: 10px 20px; /* เว้นระยะห่างภายใน Navbar */
     background-color: #333; /* สีพื้นหลังของ Navbar */
-    color: white; /* สีข้อความของ Navbar */
+    color: white; /* สีข้อความใน Navbar */
 }
 
+.navbar .logo a {
+    color: white; /* กำหนดสีของลิงค์เป็นสีขาว */
+    text-decoration: none; /* เอาเส้นใต้ลิงค์ออก */
+    transition: transform 0.2s ease, color 0.2s ease; /* เพิ่ม transition เพื่อให้การซูมลื่นไหล */
+    display: inline-block; /* กำหนดให้เป็น inline-block เพื่อให้ transform ทำงาน */
+}
+
+.navbar .logo a:hover {
+    color: #ff7b00; /* สีเมื่อวางเมาส์บนลิงก์ */
+    transform: scale(1.2); /* ซูม 10% เมื่อวางเมาส์ */
+}
+
+/* โลโก้เดิม */
 .navbar .logo {
     font-size: 30px; /* ขนาดตัวอักษรโลโก้ */
-    font-weight: bold; /* ตัวหนาของโลโก้ */
-    font-family: 'Poppins', sans-serif; /* ฟอนต์ Poppins */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* เงาของข้อความโลโก้ */
+    font-family: 'Poppins', sans-serif; /* ใช้ฟอนต์ Poppins */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* เงาของข้อความ */
 }
 
 .nav-links {
     list-style: none; /* เอาสัญลักษณ์หน้ารายการออก */
-    display: flex; /* จัดเรียงลิงก์ในแนวนอน */
+    display: flex; /* จัดลิงก์ในแนวนอน */
     gap: 20px; /* ช่องว่างระหว่างลิงก์ */
 }
 
 .nav-links a {
     color: white; /* สีของลิงก์ */
-    text-decoration: none; /* เอาเส้นใต้ของลิงก์ออก */
+    text-decoration: none; /* เอาเส้นใต้ลิงก์ออก */
     font-size: 15px; /* ขนาดตัวอักษรของลิงก์ */
     font-family: 'Poppins', sans-serif; /* ฟอนต์ Poppins */
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* เงาของลิงก์ */
+    transition: transform 0.3s ease, color 0.2s ease; /* เพิ่ม transition เพื่อให้การซูมลื่นไหล */
+    display: inline-block; /* กำหนดให้เป็น inline-block เพื่อให้ transform ทำงาน */
 }
 
 .nav-links a:hover {
-    color: #ff7b00; /* สีของลิงก์เมื่อเอาเมาส์วาง */
+    color: #ff7b00; /* สีเมื่อวางเมาส์บนลิงก์ */
+    transform: scale(1.2); /* ซูม 10% เมื่อวางเมาส์ */
 }
+
 
 
 /* ส่วนแสดง Certificates */
@@ -98,7 +114,7 @@ body {
 
 /* สไตล์ Text Box */
 .text-box {
-    margin-top: 15px; /* ช่องว่างระหว่างกล่องข้อความและองค์ประกอบด้านบน */
+    margin-top: 22px; /* ช่องว่างระหว่างกล่องข้อความและองค์ประกอบด้านบน */
     padding: 10px; /* เว้นช่องว่างภายในกล่องข้อความ */
     background-color: #333; /* สีพื้นหลังของกล่องข้อความ */
     border-radius: 10px; /* มุมโค้งของกล่องข้อความ */

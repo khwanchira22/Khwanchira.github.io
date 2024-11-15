@@ -5,41 +5,56 @@
     box-sizing: border-box; /* รวม padding และ border ในการคำนวณขนาดของกล่อง */
     font-family: 'Poppins', sans-serif; /* ใช้ฟอนต์ Poppins เป็นหลัก */
 }
-
-/* สไตล์ของ Navbar (เมนูนำทางด้านบน) */
+/* สไตล์ Navbar */
 .navbar {
     display: flex; /* ใช้ Flexbox สำหรับการจัดวาง */
-    justify-content: space-between; /* จัดองค์ประกอบภายใน Navbar ให้มีช่องว่างระหว่างกัน */
-    align-items: center; /* จัดวางองค์ประกอบภายในให้กึ่งกลางในแนวตั้ง */
-    padding: 10px 20px; /* เพิ่มช่องว่างรอบ ๆ Navbar */
-    background-color: #333; /* ตั้งค่าสีพื้นหลังของ Navbar เป็นสีเทาเข้ม */
-    color: white; /* ตั้งค่าสีตัวอักษรเป็นสีขาว */
+    justify-content: space-between; /* ช่องว่างระหว่างองค์ประกอบใน Navbar */
+    align-items: center; /* จัดวางองค์ประกอบแนวตั้ง */
+    padding: 10px 20px; /* เว้นระยะห่างภายใน Navbar */
+    background-color: #333; /* สีพื้นหลังของ Navbar */
+    color: white; /* สีข้อความใน Navbar */
 }
 
+.navbar .logo a {
+    color: white; /* กำหนดสีของลิงค์เป็นสีขาว */
+    text-decoration: none; /* เอาเส้นใต้ลิงค์ออก */
+    transition: transform 0.2s ease, color 0.2s ease; /* เพิ่ม transition เพื่อให้การซูมลื่นไหล */
+    display: inline-block; /* กำหนดให้เป็น inline-block เพื่อให้ transform ทำงาน */
+}
+
+.navbar .logo a:hover {
+    color: #ff7b00; /* สีเมื่อวางเมาส์บนลิงก์ */
+    transform: scale(1.2); /* ซูม 10% เมื่อวางเมาส์ */
+}
+
+/* โลโก้เดิม */
 .navbar .logo {
-    font-size: 30px; /* ขนาดตัวอักษรใหญ่ */
-    font-weight: bold; /* ตัวหนา */
-    font-family: 'Poppins', sans-serif; /* ฟอนต์ Poppins */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* เพิ่มเงาให้กับข้อความ */
+    font-size: 30px; /* ขนาดตัวอักษรโลโก้ */
+    font-family: 'Poppins', sans-serif; /* ใช้ฟอนต์ Poppins */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* เงาของข้อความ */
 }
 
 .nav-links {
     list-style: none; /* เอาสัญลักษณ์หน้ารายการออก */
-    display: flex; /* จัดวางลิงก์ในแนวนอน */
+    display: flex; /* จัดลิงก์ในแนวนอน */
     gap: 20px; /* ช่องว่างระหว่างลิงก์ */
 }
 
 .nav-links a {
-    color: white; /* สีของลิงก์เป็นสีขาว */
+    color: white; /* สีของลิงก์ */
     text-decoration: none; /* เอาเส้นใต้ลิงก์ออก */
     font-size: 15px; /* ขนาดตัวอักษรของลิงก์ */
     font-family: 'Poppins', sans-serif; /* ฟอนต์ Poppins */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* เพิ่มเงาให้ลิงก์ */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* เงาของลิงก์ */
+    transition: transform 0.3s ease, color 0.2s ease; /* เพิ่ม transition เพื่อให้การซูมลื่นไหล */
+    display: inline-block; /* กำหนดให้เป็น inline-block เพื่อให้ transform ทำงาน */
 }
 
 .nav-links a:hover {
-    color: #ff7b00; /* เปลี่ยนสีลิงก์เมื่อเอาเมาส์วาง */
+    color: #ff7b00; /* สีเมื่อวางเมาส์บนลิงก์ */
+    transform: scale(1.2); /* ซูม 10% เมื่อวางเมาส์ */
 }
+
 
 /* ส่วนของ "My Work" หรือการแสดงผลงาน */
 .Work {
@@ -153,17 +168,20 @@ body {
 
 /* สไตล์พื้นหลังที่แตกต่างกันสำหรับแต่ละ Slider */
 .image-sliders-section[data-sliders-id="sliders1"] {
-    background-color: #444; /* สีพื้นหลังเข้ม */
+    background-color: #444;  /* สีพื้นหลัง */
 }
 
 .image-sliders-section[data-sliders-id="sliders2"] {
-    background-color: #333; /* สีพื้นหลังเข้ม */
+    background-color: #333; /* สีพื้นหลัง */
 }
 
 .image-sliders-section[data-sliders-id="sliders3"] {
-    background-color: #444; /* สีพื้นหลังเข้ม */
+    background-color: #444;  /* สีพื้นหลัง */
 }
 
 .image-sliders-section[data-sliders-id="sliders4"] {
-    background-color: #333; /* สีพื้นหลังเข้ม */
+    background-color: #333; /* สีพื้นหลัง */
+}
+.image-sliders-section[data-sliders-id="sliders"] {
+    background-color: #444;  /* สีพื้นหลัง */
 }

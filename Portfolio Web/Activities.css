@@ -1,9 +1,3 @@
-/* รีเซ็ตสไตล์พื้นฐานของทุกองค์ประกอบในหน้า */
-* {
-    margin: 0; /* ขอบด้านนอกตั้งค่าเป็น 0 */
-    padding: 0; /* ขอบด้านในตั้งค่าเป็น 0 */
-    box-sizing: border-box; /* รวม padding และ border ในการคำนวณขนาดกล่อง */
-}
 
 /* สไตล์ Navbar */
 .navbar {
@@ -15,9 +9,21 @@
     color: white; /* สีข้อความใน Navbar */
 }
 
+.navbar .logo a {
+    color: white; /* กำหนดสีของลิงค์เป็นสีขาว */
+    text-decoration: none; /* เอาเส้นใต้ลิงค์ออก */
+    transition: transform 0.2s ease, color 0.2s ease; /* เพิ่ม transition เพื่อให้การซูมลื่นไหล */
+    display: inline-block; /* กำหนดให้เป็น inline-block เพื่อให้ transform ทำงาน */
+}
+
+.navbar .logo a:hover {
+    color: #ff7b00; /* สีเมื่อวางเมาส์บนลิงก์ */
+    transform: scale(1.2); /* ซูม 10% เมื่อวางเมาส์ */
+}
+
+/* โลโก้เดิม */
 .navbar .logo {
     font-size: 30px; /* ขนาดตัวอักษรโลโก้ */
-    font-weight: bold; /* ความหนาของข้อความ */
     font-family: 'Poppins', sans-serif; /* ใช้ฟอนต์ Poppins */
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* เงาของข้อความ */
 }
@@ -34,11 +40,30 @@
     font-size: 15px; /* ขนาดตัวอักษรของลิงก์ */
     font-family: 'Poppins', sans-serif; /* ฟอนต์ Poppins */
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* เงาของลิงก์ */
+    transition: transform 0.3s ease, color 0.2s ease; /* เพิ่ม transition เพื่อให้การซูมลื่นไหล */
+    display: inline-block; /* กำหนดให้เป็น inline-block เพื่อให้ transform ทำงาน */
 }
 
 .nav-links a:hover {
     color: #ff7b00; /* สีเมื่อวางเมาส์บนลิงก์ */
+    transform: scale(1.2); /* ซูม 10% เมื่อวางเมาส์ */
 }
+
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Mitr', sans-serif;
+}
+
+/* Body */
+body {
+    background-color: #2C2C2B;
+    color: white;
+}
+
 
 /* ส่วน Activities */
 .Activities {
@@ -48,47 +73,50 @@
     padding: 20px 20px; /* เว้นระยะห่างภายใน */
 }
 
-.Activities-section {
-    display: flex; /* ใช้ Flexbox สำหรับการจัดวาง */
-    justify-content: center; /* จัดวางกึ่งกลางแนวนอน */
-    align-items: center; /* จัดวางกึ่งกลางแนวตั้ง */
-    gap: 80px; /* ช่องว่างระหว่างองค์ประกอบ */
-}
-
 .Activities-section img {
     width: auto; /* ความกว้างอัตโนมัติ */
-    height: 200px; /* ความสูงของรูปภาพ */
+    height: 220px; /* ความสูงของรูปภาพ */
 }
 
-/* สไตล์พื้นฐานของ body */
-body {
-    background-color: #2C2C2B; /* สีพื้นหลังของหน้า */
+/* Header Section */
+.header-section {
+    text-align: center;
+    padding: 20px;
+    background-color: #2C2C2B;
 }
 
-/* สไตล์ Content Section */
+.header-section h1 {
+    font-size: 55px;
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* เงาของลิงก์ */
+    font-family: 'Mitr', sans-serif;
+    font-weight: 500
+}
+
+/* Content Section */
 .content-section {
-    background-color: #333; /* สีพื้นหลังของแต่ละ section */
-    padding: 30px; /* เว้นระยะห่างภายใน */
-    margin-bottom: 25px; /* ช่องว่างระหว่าง section */
-    border-radius: 10px; /* ทำให้มุมของ section โค้งมน */
-    width: 70%; /* ความกว้าง 70% ของหน้าจอ */
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5); /* เงาใต้กล่อง */
-    margin-left: auto;
-    margin-right: auto; /* จัดให้อยู่กลางหน้าจอ */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    gap: 20px;
+    background-color: #333;
+    border-radius: 10px;
+    width: 70%;
+    margin: 20px auto;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
 }
 
-/* Container สำหรับการจัดองค์ประกอบภายใน */
+/* Container */
 .container {
-    display: flex; /* ใช้ Flexbox */
-    align-items: center; /* จัดกึ่งกลางแนวตั้ง */
-    width: 100%;
-    max-width: 900px; /* ความกว้างสูงสุดของ container */
-    margin: auto; /* จัดให้อยู่กลาง section */
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
 /* สไตล์ Image Box */
 .image-box {
-    flex: 1; /* ใช้พื้นที่ 1 ส่วนของ Flexbox */
+    flex: 1; /* ใช้พื้นที่ 1.5 ส่วนของ Flexbox */
     margin-right: 25px; /* ช่องว่างทางขวาของกล่องรูปภาพ */
 }
 
@@ -97,21 +125,14 @@ body {
     border-radius: 15px; /* มุมโค้งของรูปภาพ */
     border: 5px solid #ff6600; /* ขอบสีส้มรอบรูปภาพ */
 }
-
-/* สไตล์ Text Box */
+/* Text Box */
 .text-box {
-    flex: 1; /* ใช้พื้นที่ 1 ส่วนของ Flexbox */
-    display: flex; /* ใช้ Flexbox ภายในกล่องข้อความ */
-    border-radius: 15px; /* มุมโค้งของกล่องข้อความ */
-    align-items: center; /* จัดข้อความให้อยู่กึ่งกลางแนวตั้ง */
-    justify-content: center; /* จัดข้อความให้อยู่กึ่งกลางแนวนอน */
-    border: 2px dashed #ff6600; /* กรอบเส้นประสีส้ม */
-    padding: 20px; /* เว้นระยะห่างภายในกล่องข้อความ */
-    color: #ffffff; /* สีข้อความ */
-    text-align: center; /* จัดข้อความให้อยู่กลาง */
-    min-height: 250px; /* ความสูงขั้นต่ำของกล่องข้อความ */
-    font-family: 'Mitr', sans-serif; /* ฟอนต์ Mitr */
-    font-size: 22px; /* ขนาดตัวอักษร */
-    line-height: 1.5; /* ระยะห่างระหว่างบรรทัด */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* เงาของข้อความ */
+    flex: 1;
+    border: 2px dashed #ff6600;
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    font-size: 22px;
+    line-height: 1.6;
 }
